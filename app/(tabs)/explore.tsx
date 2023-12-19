@@ -4,9 +4,9 @@ import React from 'react'
 const Page = () => {
   return (
     <View>
-      <Text>Page</Text>
+      <Text>explore</Text>
     </View>
   )
 }
 
-export default Page;
+export default Page
