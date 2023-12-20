@@ -63,7 +63,7 @@ function RootLayoutNav() {
             presentation: 'modal',
             animation:"slide_from_bottom",
             // headerLeft: () => (
-            //   <TouchableOpacity onPress>
+            //   <TouchableOpacity onPress={() => router.back()}>
             //     <Ionicons name="close-outline" size={24} color="black" />
             //   </TouchableOpacity>
             // )
