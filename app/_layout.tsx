@@ -76,7 +76,7 @@ function RootLayoutNav() {
             presentation: 'transparentModal',
             animation: 'fade',
             // headerLeft: () => (
-            //   <TouchableOpacity>
+            //   <TouchableOpacity onPress={() => router.back()}>
             //     <Ionicons name="close-outline" size={24} color="black" />
             //   </TouchableOpacity>
             // )
