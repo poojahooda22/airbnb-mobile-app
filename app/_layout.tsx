@@ -1,6 +1,6 @@
 
 import { useFonts } from 'expo-font';
-import { SplashScreen, Stack } from 'expo-router';
+import { SplashScreen, Stack, useRouter } from 'expo-router';
 import { useEffect } from 'react';
 import { TransitionPresets } from '@react-navigation/stack';
 import { Ionicons } from '@expo/vector-icons';
@@ -49,6 +49,7 @@ export default function RootLayout() {
 }
 
 function RootLayoutNav() {
+  const router = useRouter();
   return (
       <Stack>
         <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
@@ -62,7 +63,7 @@ function RootLayoutNav() {
             presentation: 'modal',
             animation:"slide_from_bottom",
             // headerLeft: () => (
-            //   <TouchableOpacity>
+            //   <TouchableOpacity onPress>
             //     <Ionicons name="close-outline" size={24} color="black" />
             //   </TouchableOpacity>
             // )
