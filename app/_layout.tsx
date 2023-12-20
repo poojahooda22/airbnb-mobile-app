@@ -1,9 +1,12 @@
-import FontAwesome from '@expo/vector-icons/FontAwesome';
-import { DarkTheme, DefaultTheme, ThemeProvider } from '@react-navigation/native';
+
 import { useFonts } from 'expo-font';
 import { SplashScreen, Stack } from 'expo-router';
 import { useEffect } from 'react';
-import { useColorScheme } from 'react-native';
+import { TransitionPresets } from '@react-navigation/stack';
+
+import login from './(modals)/login';
+
+
 
 export {
   // Catch any errors thrown by the Layout component.
@@ -20,7 +23,7 @@ SplashScreen.preventAutoHideAsync();
 
 export default function RootLayout() {
   const [loaded, error] = useFonts({
-    'mon': require('../assets/fonts/Montserrat-Regular.ttf'),
+    mon: require('../assets/fonts/Montserrat-Regular.ttf'),
     'mon-sb': require('../assets/fonts/Montserrat-SemiBold.ttf'),
     'mon-b': require('../assets/fonts/Montserrat-Bold.ttf'),
   });
@@ -47,6 +50,18 @@ function RootLayoutNav() {
   return (
       <Stack>
         <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
+        <Stack.Screen
+          name="(modals)/login"
+          options={{
+            title: 'Log in or sign up',
+            headerTitleStyle: {
+              fontFamily: 'mon-sb',
+            },
+            presentation: 'modal',
+            animation:"slide_from_bottom"
+          }}
+        />
+        
       </Stack>
   );
 }
