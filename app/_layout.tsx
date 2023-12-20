@@ -61,11 +61,11 @@ function RootLayoutNav() {
             },
             presentation: 'modal',
             animation:"slide_from_bottom",
-            headerLeft: () => (
-              <TouchableOpacity>
-                <Ionicons name="close-outline" size={24} color="black" />
-              </TouchableOpacity>
-            )
+            // headerLeft: () => (
+            //   <TouchableOpacity>
+            //     <Ionicons name="close-outline" size={24} color="black" />
+            //   </TouchableOpacity>
+            // )
           }}
         />
         
