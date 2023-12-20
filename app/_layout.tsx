@@ -7,6 +7,10 @@ import { Ionicons } from '@expo/vector-icons';
 
 import login from './(modals)/login';
 import { TouchableOpacity } from 'react-native';
+import { ClerkProvider } from "@clerk/clerk-expo";
+
+
+const clerkFrontendApi = process.env.CLERK_PUBLISHABLE_KEY;
 
 
 
