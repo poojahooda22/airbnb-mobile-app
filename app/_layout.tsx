@@ -3,8 +3,10 @@ import { useFonts } from 'expo-font';
 import { SplashScreen, Stack } from 'expo-router';
 import { useEffect } from 'react';
 import { TransitionPresets } from '@react-navigation/stack';
+import { Ionicons } from '@expo/vector-icons';
 
 import login from './(modals)/login';
+import { TouchableOpacity } from 'react-native';
 
 
 
@@ -58,7 +60,12 @@ function RootLayoutNav() {
               fontFamily: 'mon-sb',
             },
             presentation: 'modal',
-            animation:"slide_from_bottom"
+            animation:"slide_from_bottom",
+            headerLeft: () => (
+              <TouchableOpacity>
+                <Ionicons name="close-outline" size={24} color="black" />
+              </TouchableOpacity>
+            )
           }}
         />
         
