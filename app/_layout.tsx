@@ -11,7 +11,7 @@ import { ClerkProvider, useAuth } from "@clerk/clerk-expo";
 import * as SecureStore from 'expo-secure-store';
 
 
-const clerkFrontendApi = "pk_test_b25lLWJvYmNhdC04OC5jbGVyay5hY2NvdW50cy5kZXYk";
+const CLERK_PUBLISHABLE_KEY = process.env.EXPO_PUBLIC_CLERK_PUBLISHABLE_KEY;
 
 const tokenCache = {
   async getToken(key: string) {
@@ -68,7 +68,7 @@ export default function RootLayout() {
   }
 
   return (
-    <ClerkProvider publishableKey={clerkFrontendApi!} tokenCache={tokenCache}>
+    <ClerkProvider publishableKey={CLERK_PUBLISHABLE_KEY!} tokenCache={tokenCache}>
       <RootLayoutNav />
     </ClerkProvider>
   );
