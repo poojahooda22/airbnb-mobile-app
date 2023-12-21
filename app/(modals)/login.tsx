@@ -65,7 +65,7 @@ return (
           <Ionicons name="md-logo-google" size={24} style={defaultStyles.btnIcon}/>
           <Text style={styles.btnOutlineText}>Continue with Google</Text>
         </TouchableOpacity>
-        <TouchableOpacity style={styles.btnOutline}>
+        <TouchableOpacity style={styles.btnOutline} onPress={() => onSelectAuth(Strategy.Github)}>
           <Ionicons name="md-logo-github" size={24} style={defaultStyles.btnIcon}/>
           <Text style={styles.btnOutlineText}>Continue with Github</Text>
         </TouchableOpacity>
