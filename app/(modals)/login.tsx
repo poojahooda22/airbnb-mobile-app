@@ -19,6 +19,7 @@ const Page = () => {
   useWarmUpBrowser();
 
   const { startOAuthFlow: googleAuth } = useOAuth({strategy: 'oauth_google'});
+  const { startOAuthFlow: githubAuth } = useOAuth({strategy: 'oauth_github'});
   
 
 return (
