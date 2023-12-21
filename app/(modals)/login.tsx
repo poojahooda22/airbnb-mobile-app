@@ -34,7 +34,7 @@ const Page = () => {
         console.log("~ file: login.tsx:31 ~ onSelectedAuth ~ createdSessionId", createdSessionId);
 
         if(createdSessionId) {
-          setActive!({ session: createdSessionId })
+          setActive!({ session: createdSessionId });
           router.back();
         } 
       } catch (err) {
