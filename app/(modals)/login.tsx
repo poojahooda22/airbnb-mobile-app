@@ -3,6 +3,9 @@ import React from 'react'
 import { useWarmUpBrowser } from '@/hooks/useWarmUpBrowser'
 import { defaultStyles } from '@/constants/Styles';
 import Colors from '@/constants/Colors';
+import { Ionicons } from '@expo/vector-icons';
+import { FontAwesome5 } from '@expo/vector-icons';
+import { MaterialCommunityIcons } from '@expo/vector-icons';
 
 const Page = () => {
   useWarmUpBrowser();
@@ -35,6 +38,14 @@ return (
           }}
         />
       </View>
+
+      <View>
+        <TouchableOpacity style={styles.btnOutline}>
+          <Ionicons name="call-outline" size={24} style={defaultStyles.btnIcon}/>
+          <Text style={styles.btnOutlineText}>Continue with Phone</Text>
+        </TouchableOpacity>
+       
+      </View>
     </View>
   );
 };
@@ -65,6 +76,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     flexDirection: 'row',
     paddingHorizontal: 10,
+    marginBottom: 24,
   },
   btnOutlineText: {
     color: '#000',
