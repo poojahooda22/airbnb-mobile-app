@@ -39,21 +39,21 @@ return (
         />
       </View>
 
-      <View>
+      <View style={{gap: 20}}>
         <TouchableOpacity style={styles.btnOutline}>
           <Ionicons name="call-outline" size={24} style={defaultStyles.btnIcon}/>
           <Text style={styles.btnOutlineText}>Continue with Phone</Text>
         </TouchableOpacity>
         <TouchableOpacity style={styles.btnOutline}>
-          <Ionicons name="call-outline" size={24} style={defaultStyles.btnIcon}/>
+          <Ionicons name="md-logo-google" size={24} style={defaultStyles.btnIcon}/>
           <Text style={styles.btnOutlineText}>Continue with Google</Text>
         </TouchableOpacity>
         <TouchableOpacity style={styles.btnOutline}>
-          <Ionicons name="call-outline" size={24} style={defaultStyles.btnIcon}/>
+          <Ionicons name="md-logo-github" size={24} style={defaultStyles.btnIcon}/>
           <Text style={styles.btnOutlineText}>Continue with Github</Text>
         </TouchableOpacity>
         <TouchableOpacity style={styles.btnOutline}>
-          <Ionicons name="call-outline" size={24} style={defaultStyles.btnIcon}/>
+          <Ionicons name="md-logo-linkedin" size={24} style={defaultStyles.btnIcon}/>
           <Text style={styles.btnOutlineText}>Continue with Linkedin</Text>
         </TouchableOpacity>
        
@@ -88,7 +88,6 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     flexDirection: 'row',
     paddingHorizontal: 10,
-    marginBottom: 24,
   },
   btnOutlineText: {
     color: '#000',
