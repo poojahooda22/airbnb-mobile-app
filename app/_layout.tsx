@@ -7,10 +7,28 @@ import { Ionicons } from '@expo/vector-icons';
 
 import login from './(modals)/login';
 import { TouchableOpacity } from 'react-native';
-import { ClerkProvider } from "@clerk/clerk-expo";
+import { ClerkProvider, useAuth } from "@clerk/clerk-expo";
+import * as SecureStore from 'expo-secure-store';
 
 
-const clerkFrontendApi = process.env.CLERK_PUBLISHABLE_KEY;
+const clerkFrontendApi = "pk_test_b25lLWJvYmNhdC04OC5jbGVyay5hY2NvdW50cy5kZXYk";
+
+const tokenCache = {
+  async getToken(key: string) {
+    try {
+      return SecureStore.getItemAsync(key);
+    } catch (err) {
+      return null;
+    }
+  },
+  async saveToken(key: string, value: string) {
+    try{
+      return SecureStore.setItemAsync(key, value);
+    } catch(err) {
+      return;
+    }
+  }
+}
 
 
 
@@ -49,11 +67,22 @@ export default function RootLayout() {
     return null;
   }
 
-  return <RootLayoutNav />;
-}
+  return (
+    <ClerkProvider publishableKey={clerkFrontendApi!} tokenCache={tokenCache}>
+      <RootLayoutNav />
+    </ClerkProvider>
+  );
+};
 
 function RootLayoutNav() {
   const router = useRouter();
+  const { isLoaded, isSignedIn} = useAuth();
+
+  useEffect (() => {
+    if (isLoaded && !isSignedIn) {
+      router.push('/(modals)/login');
+    }
+  }, [isLoaded])
   return (
       <Stack>
         <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
