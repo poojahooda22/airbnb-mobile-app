@@ -6,9 +6,20 @@ import Colors from '@/constants/Colors';
 import { Ionicons } from '@expo/vector-icons';
 import { FontAwesome5 } from '@expo/vector-icons';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
+import { useOAuth } from "@clerk/clerk-expo";
+
+
+enum Strategy {
+  Google = 'oauth_google',
+  Github = 'oauth_github',
+  Linkedin = 'oauth_linkedin'
+}
 
 const Page = () => {
   useWarmUpBrowser();
+
+  const { startOAuthFlow: googleAuth } = useOAuth({strategy: 'oauth_google'});
+  
 
 return (
     <View style={styles.container}>
