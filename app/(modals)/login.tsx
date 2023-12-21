@@ -20,6 +20,7 @@ const Page = () => {
 
   const { startOAuthFlow: googleAuth } = useOAuth({strategy: 'oauth_google'});
   const { startOAuthFlow: githubAuth } = useOAuth({strategy: 'oauth_github'});
+  const { startOAuthFlow: linkedinAuth } = useOAuth({strategy: 'oauth_linkedin'});
   
 
 return (
