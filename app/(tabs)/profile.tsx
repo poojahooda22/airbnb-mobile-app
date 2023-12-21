@@ -1,10 +1,15 @@
-import { View, Text } from 'react-native'
-import React from 'react'
+import { View, Text, Button } from 'react-native'
+import React from 'react';
+import { useAuth } from "@clerk/clerk-react";
 
 const Page = () => {
+  const { signOut, isSignedIn } = useAuth();
   return (
     <View>
-      <Text>Profile</Text>
+      <Button>
+        {isSignedIn && 
+        <}
+      </Button>
     </View>
   )
 }
