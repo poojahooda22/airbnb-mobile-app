@@ -54,7 +54,23 @@ const styles = StyleSheet.create({
   separator: {
     fontFamily: 'mon-sb',
     color: Colors.grey,
-  }
+  },
+  btnOutline: {
+    backgroundColor: '#fff',
+    borderWidth: 1,
+    borderColor: Colors.grey,
+    height: 50,
+    borderRadius: 8,
+    alignItems: 'center',
+    justifyContent: 'center',
+    flexDirection: 'row',
+    paddingHorizontal: 10,
+  },
+  btnOutlineText: {
+    color: '#000',
+    fontSize: 16,
+    fontFamily: 'mon-sb'
+  },
 });
 
 export default Page;
