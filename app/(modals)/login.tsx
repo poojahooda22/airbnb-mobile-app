@@ -21,6 +21,10 @@ const Page = () => {
   const { startOAuthFlow: googleAuth } = useOAuth({strategy: 'oauth_google'});
   const { startOAuthFlow: githubAuth } = useOAuth({strategy: 'oauth_github'});
   const { startOAuthFlow: linkedinAuth } = useOAuth({strategy: 'oauth_linkedin'});
+
+  const onSelectAuth = async (strategy: Strategy) => {
+    
+  }
   
 
 return (
@@ -57,7 +61,7 @@ return (
           <Ionicons name="call-outline" size={24} style={defaultStyles.btnIcon}/>
           <Text style={styles.btnOutlineText}>Continue with Phone</Text>
         </TouchableOpacity>
-        <TouchableOpacity style={styles.btnOutline}>
+        <TouchableOpacity style={styles.btnOutline} onPress={() => onSelectAuth(Strategy.Google)}>
           <Ionicons name="md-logo-google" size={24} style={defaultStyles.btnIcon}/>
           <Text style={styles.btnOutlineText}>Continue with Google</Text>
         </TouchableOpacity>
