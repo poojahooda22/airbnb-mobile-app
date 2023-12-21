@@ -44,6 +44,18 @@ return (
           <Ionicons name="call-outline" size={24} style={defaultStyles.btnIcon}/>
           <Text style={styles.btnOutlineText}>Continue with Phone</Text>
         </TouchableOpacity>
+        <TouchableOpacity style={styles.btnOutline}>
+          <Ionicons name="call-outline" size={24} style={defaultStyles.btnIcon}/>
+          <Text style={styles.btnOutlineText}>Continue with Google</Text>
+        </TouchableOpacity>
+        <TouchableOpacity style={styles.btnOutline}>
+          <Ionicons name="call-outline" size={24} style={defaultStyles.btnIcon}/>
+          <Text style={styles.btnOutlineText}>Continue with Github</Text>
+        </TouchableOpacity>
+        <TouchableOpacity style={styles.btnOutline}>
+          <Ionicons name="call-outline" size={24} style={defaultStyles.btnIcon}/>
+          <Text style={styles.btnOutlineText}>Continue with Linkedin</Text>
+        </TouchableOpacity>
        
       </View>
     </View>
