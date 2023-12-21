@@ -7,6 +7,7 @@ import { Ionicons } from '@expo/vector-icons';
 import { FontAwesome5 } from '@expo/vector-icons';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { useOAuth } from "@clerk/clerk-expo";
+import { useRouter } from 'expo-router';
 
 
 enum Strategy {
@@ -17,13 +18,28 @@ enum Strategy {
 
 const Page = () => {
   useWarmUpBrowser();
-
+  const router = useRouter();
   const { startOAuthFlow: googleAuth } = useOAuth({strategy: 'oauth_google'});
   const { startOAuthFlow: githubAuth } = useOAuth({strategy: 'oauth_github'});
   const { startOAuthFlow: linkedinAuth } = useOAuth({strategy: 'oauth_linkedin'});
 
   const onSelectAuth = async (strategy: Strategy) => {
-    
+      const selectedAuth = {
+        [Strategy.Google]: googleAuth,
+        [Strategy.Github]: githubAuth,
+        [Strategy.Linkedin]: linkedinAuth 
+      }[strategy];
+      try {
+        const { createdSessionId, setActive} = await selectedAuth();
+        console.log("~ file: login.tsx:31 ~ onSelectedAuth ~ createdSessionId", createdSessionId);
+
+        if(createdSessionId) {
+          setActive!({ session: createdSessionId })
+          router.back();
+        } 
+      } catch (err) {
+        console.error('Auth error: ', err);
+      }
   }
   
 
