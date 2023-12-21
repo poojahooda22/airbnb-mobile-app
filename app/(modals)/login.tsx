@@ -1,12 +1,23 @@
-import { View, Text } from 'react-native'
+import { View, Text, StyleSheet } from 'react-native'
 import React from 'react'
+import { useWarmUpBrowser } from '@/hooks/useWarmUpBrowser'
 
 const Page = () => {
-  return (
-    <View>
-      <Text>login</Text>
+  useWarmUpBrowser();
+
+return (
+    <View style={styles.container}>
+      
     </View>
-  )
-}
+  );
+};
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: '#fff',
+    padding: 26
+  },
+});
 
 export default Page;
