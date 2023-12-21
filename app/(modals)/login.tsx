@@ -38,9 +38,9 @@ const Page = () => {
           router.back();
         } 
       } catch (err) {
-        console.error('Auth error: ', err);
+        console.error('OAuth error: ', err);
       }
-  }
+  };
   
 
 return (
