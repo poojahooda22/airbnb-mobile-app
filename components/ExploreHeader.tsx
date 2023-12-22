@@ -1,4 +1,4 @@
-import { View, Text, StyleSheet, SafeAreaView, TouchableOpacity } from 'react-native';
+import { View, Text, StyleSheet, SafeAreaView, TouchableOpacity, ScrollView } from 'react-native';
 import React from 'react';
 import { Ionicons } from '@expo/vector-icons';
 import { FontAwesome5 } from '@expo/vector-icons';
@@ -47,8 +47,8 @@ const ExploreHeader = () => {
                     <TouchableOpacity style={styles.searchBtn}>
                         <Ionicons name="search" size={24} />
                         <View>
-                            <Text style={{ fontFamily: 'mon-sb'}}>Where to</Text>
-                            <Text style={{ fontFamily: 'mon'}}>Anywhere . Any week . Any Guest</Text>
+                            <Text style={{ fontFamily: 'mon-sb'}}>Where to?</Text>
+                            <Text style={{ fontFamily: 'mon', color: Colors.grey}}>Anywhere . Any week . Any Guest</Text>
                         </View>
                     </TouchableOpacity>
                 </Link>
@@ -57,6 +57,17 @@ const ExploreHeader = () => {
                     <Ionicons name="options-outline" size={24} />
                 </TouchableOpacity>
             </View>
+
+            <ScrollView horizontal>
+                {categories.map((item, index) => (
+                    <TouchableOpacity>
+                        <Text>
+                            {item.name}
+                        </Text>
+                    </TouchableOpacity>
+                ))}
+
+            </ScrollView>
         </View>
     </SafeAreaView>
   );
@@ -66,6 +77,8 @@ const styles = StyleSheet.create({
     container: {
         backgroundColor: '#fff',
         height: 95,
+        flexDirection: 'row',
+        alignItems: 'center',
     },
     actionRow: {
         flexDirection: 'row',
@@ -73,6 +86,7 @@ const styles = StyleSheet.create({
         justifyContent: 'space-between',
         paddingHorizontal: 24,
         paddingBottom: 16,
+        gap: 10,
     },
     filterBtn: {
         padding: 10,
@@ -82,6 +96,23 @@ const styles = StyleSheet.create({
     },
     searchBtn: {
         flexDirection: 'row',
+        alignItems: 'center',
+        gap: 10,
+        borderColor: '#c2c2c2',
+        borderWidth: StyleSheet.hairlineWidth,
+        flex: 1,
+        padding: 14,
+        borderRadius: 30,
+        backgroundColor: '#fff',
+
+        elevation: 2,
+        shadowColor: '#000',
+        shadowOpacity: 0.12,
+        shadowRadius: 8,
+        shadowOffset: {
+            width: 1,
+            height: 1,
+        },
     }
 });
 
