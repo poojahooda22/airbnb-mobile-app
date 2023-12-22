@@ -46,7 +46,8 @@ const ExploreHeader = () => {
             backgroundColor: '#fff', 
             marginTop: 32
         }}>
-        <View style={styles.container}>
+        <View 
+        style={styles.container}>
             <View style={styles.actionRow}>
                 <Link href={'/(modals)/booking'} asChild>
                     <TouchableOpacity style={styles.searchBtn}>
