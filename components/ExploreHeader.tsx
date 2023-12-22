@@ -51,7 +51,8 @@ const ExploreHeader = () => {
         >
             <View 
                 style={styles.actionRow}>
-                <Link href={'/(modals)/booking'} asChild>
+                <Link 
+                href={'/(modals)/booking'} asChild>
                     <TouchableOpacity style={styles.searchBtn}>
                         <Ionicons name="search" size={24} />
                         <View>
