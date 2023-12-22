@@ -41,7 +41,9 @@ const categories = [
 const ExploreHeader = () => { 
   return (
     <SafeAreaView 
-        style={{ flex: 1, backgroundColor: '#fff', marginTop: 32}}>
+        style={{ 
+            flex: 1, 
+            backgroundColor: '#fff', marginTop: 32}}>
         <View style={styles.container}>
             <View style={styles.actionRow}>
                 <Link href={'/(modals)/booking'} asChild>
