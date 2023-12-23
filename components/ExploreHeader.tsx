@@ -1,6 +1,6 @@
 import { View, Text, StyleSheet, SafeAreaView, TouchableOpacity, ScrollView } from 'react-native';
 import React from 'react';
-import { Ionicons } from '@expo/vector-icons';
+import { Ionicons, MaterialIcons } from '@expo/vector-icons';
 import { FontAwesome5 } from '@expo/vector-icons';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { Link } from 'expo-router';
@@ -71,7 +71,8 @@ const ExploreHeader = () => {
 
             <ScrollView horizontal>
                 {categories.map((item, index) => (
-                    <TouchableOpacity key={index}> 
+                    <TouchableOpacity key={index}>
+                        <MaterialIcons size={24} name={item.icon as any} /> 
                         <Text>{item.name}</Text>
                     </TouchableOpacity>
                 ))}
