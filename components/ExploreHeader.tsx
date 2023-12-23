@@ -69,7 +69,14 @@ const ExploreHeader = () => {
                 </TouchableOpacity>
             </View>
 
-            <ScrollView horizontal>
+            <ScrollView horizontal
+                showsHorizontalScrollIndicator={false}
+                contentContainerStyle={{
+                    alignItems: 'center',
+                    gap: 20,
+                    paddingHorizontal: 16,
+                }}
+            >
                 {categories.map((item, index) => (
                     <TouchableOpacity key={index}>
                         <MaterialIcons size={24} name={item.icon as any} /> 
