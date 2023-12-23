@@ -72,9 +72,7 @@ const ExploreHeader = () => {
             <ScrollView horizontal>
                 {categories.map((item, index) => (
                     <TouchableOpacity key={index}> 
-                        <Text>
-                            {item.name}
-                        </Text>
+                        <Text>{item.name}</Text>
                     </TouchableOpacity>
                 ))}
             </ScrollView>
@@ -86,9 +84,9 @@ const ExploreHeader = () => {
 const styles = StyleSheet.create({
     container: {
         backgroundColor: '#fff',
-        height: 95,
-        flexDirection: 'row',
-        alignItems: 'center',
+        height: 180,
+        paddingTop: 12,
+        
     },
     actionRow: {
         flexDirection: 'row',
