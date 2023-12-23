@@ -69,7 +69,8 @@ const ExploreHeader = () => {
                 </TouchableOpacity>
             </View>
 
-            <ScrollView horizontal
+            <ScrollView 
+                horizontal
                 showsHorizontalScrollIndicator={false}
                 contentContainerStyle={{
                     alignItems: 'center',
