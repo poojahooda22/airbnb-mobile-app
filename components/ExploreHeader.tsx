@@ -7,11 +7,11 @@ import { Link } from 'expo-router';
 import Colors from '@/constants/Colors';
 
 const categories = [
-    {
+    {   
         name: 'Tiny homes',
         icon: 'home',
     },
-    {
+    {   
         name: 'Cabins',
         icon: 'house-siding',
     },
@@ -28,6 +28,7 @@ const categories = [
         icon: 'apartment',
     },
     {
+
         name: 'Beachfront',
         icon: 'nature-people',
     },
@@ -70,13 +71,12 @@ const ExploreHeader = () => {
 
             <ScrollView horizontal>
                 {categories.map((item, index) => (
-                    <TouchableOpacity>
+                    <TouchableOpacity key={index}> 
                         <Text>
                             {item.name}
                         </Text>
                     </TouchableOpacity>
                 ))}
-
             </ScrollView>
         </View>
     </SafeAreaView>
