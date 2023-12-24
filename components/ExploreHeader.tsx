@@ -94,7 +94,8 @@ const ExploreHeader = () => {
                         style={activeIndex === index ? styles.categoryBtnActive : styles.categoryBtn}
                     >
                         <MaterialIcons 
-                            size={24} name={item.icon as any} /> 
+                            size={24} 
+                            name={item.icon as any} /> 
                         <Text>{item.name}</Text>
                     </TouchableOpacity>
                 ))}
