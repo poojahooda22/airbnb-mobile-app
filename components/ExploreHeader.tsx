@@ -5,6 +5,8 @@ import { FontAwesome5 } from '@expo/vector-icons';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { Link } from 'expo-router';
 import Colors from '@/constants/Colors';
+import { useRef } from 'react';
+import { useState } from 'react';
 
 const categories = [
     {   
@@ -40,6 +42,8 @@ const categories = [
 
 
 const ExploreHeader = () => { 
+    const itemsRef = useRef<Array<TouchableOpacity | null >>([]);
+    const [activeIndex, setActiveIndex] = useState(0);
   return (
     <SafeAreaView 
         style={{ 
@@ -79,7 +83,7 @@ const ExploreHeader = () => {
                 }}
             >
                 {categories.map((item, index) => (
-                    <TouchableOpacity key={index} style={{alignItems: 'center'}}>
+                    <TouchableOpacity key={index}>
                         <MaterialIcons size={24} name={item.icon as any} /> 
                         <Text>{item.name}</Text>
                     </TouchableOpacity>
@@ -130,7 +134,31 @@ const styles = StyleSheet.create({
             width: 1,
             height: 1,
         },
-    }
+    },
+    categoryText: {
+        fontSize: 14,
+        fontFamily: 'mon-sb',
+        color: Colors.grey,
+    },
+    categoryTextActive: {
+        fontSize: 14,
+        fontFamily: 'mon-sb',
+        color: '#000',
+    },
+    categoryBtn: {
+        flex: 1,
+        alignItems: 'center',
+        justifyContent: 'center',
+        paddingBottom: 8,
+    },
+    categoryBtnActive: {
+        flex: 1,
+        alignItems: 'center',
+        justifyContent: 'center',
+        paddingBottom: 8,
+        borderBottomWidth: 2,
+        borderBottomColor: '#000',
+    },
 });
 
 export default ExploreHeader;
