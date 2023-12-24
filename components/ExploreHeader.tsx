@@ -96,6 +96,7 @@ const ExploreHeader = () => {
                         <MaterialIcons 
                             size={24} 
                             name={item.icon as any}
+                            color={activeIndex === index ? '#000' : Colors.grey}
                         /> 
                         <Text>{item.name}</Text>
                     </TouchableOpacity>
