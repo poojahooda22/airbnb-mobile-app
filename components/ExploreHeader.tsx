@@ -85,7 +85,8 @@ const ExploreHeader = () => {
                 </TouchableOpacity>
             </View>
 
-            <ScrollView 
+            <ScrollView
+                ref={scrollRef} 
                 horizontal
                 showsHorizontalScrollIndicator={false}
                 contentContainerStyle={{
