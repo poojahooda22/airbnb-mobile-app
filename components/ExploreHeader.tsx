@@ -85,7 +85,8 @@ const ExploreHeader = () => {
                 {categories.map((item, index) => (
                     <TouchableOpacity 
                         key={index}
-                        ref={(el) => itemsRef.current[index] = el}
+                        ref={(el ) => itemsRef.current[index] = el}
+                        style={activeIndex === index ? styles.categoryBtnActive : styles.categoryBtn}
                     >
                         <MaterialIcons size={24} name={item.icon as any} /> 
                         <Text>{item.name}</Text>
