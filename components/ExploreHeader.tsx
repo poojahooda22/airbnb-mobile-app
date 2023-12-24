@@ -95,7 +95,8 @@ const ExploreHeader = () => {
                     >
                         <MaterialIcons 
                             size={24} 
-                            name={item.icon as any} /> 
+                            name={item.icon as any}
+                        /> 
                         <Text>{item.name}</Text>
                     </TouchableOpacity>
                 ))}
