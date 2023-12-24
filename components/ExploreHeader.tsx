@@ -98,7 +98,9 @@ const ExploreHeader = () => {
                             name={item.icon as any}
                             color={activeIndex === index ? '#000' : Colors.grey}
                         /> 
-                        <Text>{item.name}</Text>
+                        <Text
+                            style={}
+                        >{item.name}</Text>
                     </TouchableOpacity>
                 ))}
             </ScrollView>
