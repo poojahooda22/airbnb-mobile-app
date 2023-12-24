@@ -43,7 +43,11 @@ const categories = [
 
 const ExploreHeader = () => { 
     const itemsRef = useRef<Array<TouchableOpacity | null >>([]);
-    const [activeIndex, setActiveIndex] = useState(0);
+    const [activeIndex, setActiveIndex] = useState(1);
+
+    const selectCategory = ( index: number) => {
+        setActiveIndex(index);
+    }
   return (
     <SafeAreaView 
         style={{ 
