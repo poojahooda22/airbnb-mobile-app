@@ -1,12 +1,12 @@
 import { View, Text, StyleSheet, SafeAreaView, TouchableOpacity, ScrollView } from 'react-native';
-import React from 'react';
+import React, { useRef, useState} from 'react';
 import { Ionicons, MaterialIcons } from '@expo/vector-icons';
 import { FontAwesome5 } from '@expo/vector-icons';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { Link } from 'expo-router';
 import Colors from '@/constants/Colors';
-import { useRef } from 'react';
-import { useState } from 'react';
+
+
 
 const categories = [
     {   
