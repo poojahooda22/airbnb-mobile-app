@@ -46,7 +46,14 @@ const ExploreHeader = () => {
     const [activeIndex, setActiveIndex] = useState(1);
 
     const selectCategory = ( index: number) => {
+        const selected = itemsRef.current[index];
         setActiveIndex(index);
+
+        selected?.measure((x) => {
+
+        })
+
+        Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light);
     }
   return (
     <SafeAreaView 
