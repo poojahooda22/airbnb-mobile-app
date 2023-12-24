@@ -99,7 +99,7 @@ const ExploreHeader = () => {
                             color={activeIndex === index ? '#000' : Colors.grey}
                         /> 
                         <Text
-                            style={}
+                            style={activeIndex === index ? styles.categoryTextActive : styles.categoryText}
                         >{item.name}</Text>
                     </TouchableOpacity>
                 ))}
