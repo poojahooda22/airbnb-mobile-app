@@ -5,7 +5,7 @@ import { FontAwesome5 } from '@expo/vector-icons';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { Link } from 'expo-router';
 import Colors from '@/constants/Colors';
-
+import * as Haptics from 'expo-haptics';
 
 
 const categories = [
