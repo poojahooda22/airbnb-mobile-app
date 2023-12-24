@@ -85,7 +85,7 @@ const ExploreHeader = () => {
                 {categories.map((item, index) => (
                     <TouchableOpacity 
                         key={index}
-                        >
+                    >
                         <MaterialIcons size={24} name={item.icon as any} /> 
                         <Text>{item.name}</Text>
                     </TouchableOpacity>
