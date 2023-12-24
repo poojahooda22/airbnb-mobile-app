@@ -87,7 +87,8 @@ const ExploreHeader = () => {
                 }}
             >
                 {categories.map((item, index) => (
-                    <TouchableOpacity 
+                    <TouchableOpacity
+                        onPress={() => selectCategory(index)} 
                         key={index}
                         ref={(el ) => itemsRef.current[index] = el}
                         style={activeIndex === index ? styles.categoryBtnActive : styles.categoryBtn}
