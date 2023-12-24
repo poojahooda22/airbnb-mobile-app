@@ -42,6 +42,7 @@ const categories = [
 
 
 const ExploreHeader = () => { 
+    const scrollRef = useRef<ScrollView>(null);
     const itemsRef = useRef<Array<TouchableOpacity | null >>([]);
     const [activeIndex, setActiveIndex] = useState(1);
 
