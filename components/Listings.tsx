@@ -35,7 +35,8 @@ const Listings = ({ listings: items, category}: Props) => {
           entering={FadeInRight} 
           exiting={FadeOutLeft}>
           <Image 
-            source={{ uri: item.medium_url}} style={styles.image} />
+            source={{ uri: item.medium_url}} 
+            style={styles.image} />
           <TouchableOpacity style={{ position: 'absolute', right: 30, top: 30}}>
             <Ionicons name="heart-outline" size={24} color={'#000'} />
           </TouchableOpacity>
