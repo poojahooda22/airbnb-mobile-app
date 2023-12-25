@@ -42,7 +42,8 @@ const Listings = ({ listings: items, category}: Props) => {
             style={{ position: 'absolute', right: 30, top: 30}}
           >
             <Ionicons 
-              name="heart-outline" size={24} color={'#000'} />
+              name="heart-outline" 
+              size={24} color={'#000'} />
           </TouchableOpacity>
 
           <View style={{ flexDirection: 'row', justifyContent: 'space-between'}}>
