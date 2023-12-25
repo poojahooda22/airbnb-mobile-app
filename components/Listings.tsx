@@ -48,7 +48,8 @@ const Listings = ({ listings: items, category}: Props) => {
             />
           </TouchableOpacity>
 
-          <View style={{ flexDirection: 'row', justifyContent: 'space-between'}}>
+          <View 
+            style={{ flexDirection: 'row', justifyContent: 'space-between'}}>
             <Text style={{ fontSize: 16, fontFamily: 'mon-sb' }}>{item.name}</Text>
             <View style={{ flexDirection: 'row', gap: 4}} >
               <Ionicons name="star" size={16} />
