@@ -28,7 +28,7 @@ const Listings = ({ listings: items, category}: Props) => {
 
   const renderRow: ListRenderItem<any> = ({item}) => (
     <Link 
-    href ={`/listing/${item.id}`} asChild> 
+      href ={`/listing/${item.id}`} asChild> 
       <TouchableOpacity>
         
         <Animated.View style={styles.listing} entering={FadeInRight} exiting={FadeOutLeft}>
