@@ -38,10 +38,14 @@ const categories = [
         name: 'Countryside',
         icon: 'nature-people',
     }
-]
+];
+
+interface Props {
+    onCategoryChanged: (category: string) => void;
+}
 
 
-const ExploreHeader = () => { 
+const ExploreHeader = ({ onCategoryChanged}: Props) => { 
     const scrollRef = useRef<ScrollView>(null);
     const itemsRef = useRef<Array<TouchableOpacity | null >>([]);
     const [activeIndex, setActiveIndex] = useState(1);
@@ -51,10 +55,15 @@ const ExploreHeader = () => {
         setActiveIndex(index);
 
         selected?.measure((x) => {
-
-        })
+            scrollRef.current?.scrollTo({
+                x: x -16 ,
+                y: 0,
+                animated: true,
+            })
+        });
 
         Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light);
+        onCategoryChanged(categories[index].name);
     }
   return (
     <SafeAreaView 
@@ -75,7 +84,7 @@ const ExploreHeader = () => {
                         <Ionicons name="search" size={24} />
                         <View>
                             <Text style={{ fontFamily: 'mon-sb'}}>Where to?</Text>
-                            <Text style={{ fontFamily: 'mon', color: Colors.grey}}>Anywhere . Any week . Any Guest</Text>
+                            <Text style={{ fontFamily: 'mon', color: Colors.grey}}>Anywhere . Any week</Text>
                         </View>
                     </TouchableOpacity>
                 </Link>
@@ -87,11 +96,11 @@ const ExploreHeader = () => {
 
             <ScrollView
                 ref={scrollRef} 
-                horizontal
+                horizontal={true}
                 showsHorizontalScrollIndicator={false}
                 contentContainerStyle={{
                     alignItems: 'center',
-                    gap: 20,
+                    gap: 30,
                     paddingHorizontal: 16,
                 }}
             >
