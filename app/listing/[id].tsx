@@ -26,10 +26,11 @@ const Page = () => {
           </Text>
           <View style={{ flexDirection: 'row', gap:4 }}>
             <Ionicons name="star" size={16} />
-            <Text>
+            <Text style={styles.ratings}>
               {listing.review_scores_rating / 20} . {listing.number_of_reviews} reviews
             </Text>
           </View>
+          
         </View>
       </Animated.ScrollView>
     </View>
