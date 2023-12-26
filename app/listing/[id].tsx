@@ -31,6 +31,10 @@ const Page = () => {
             </Text>
           </View>
           <View style={styles.divider} />
+
+          <View style={}>
+
+          </View>
         </View>
       </Animated.ScrollView>
     </View>
