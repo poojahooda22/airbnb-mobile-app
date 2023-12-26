@@ -37,7 +37,7 @@ const Page = () => {
 
             <View>
               <Text style={{ fontWeight: '500', fontSize: 16}}>Hosted by {listing.host_name}</Text>
-              <Text></Text>
+              <Text>{listing.host_since}</Text>
             </View>
 
           </View>
