@@ -35,6 +35,10 @@ const Page = () => {
           <View style={styles.hostView}>
             <Image source={{ uri: listing.host_picture_url }} style={styles.host} />
 
+            <View>
+              <Text></Text>
+            </View>
+
           </View>
         </View>
       </Animated.ScrollView>
