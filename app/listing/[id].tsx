@@ -33,7 +33,7 @@ const Page = () => {
           <View style={styles.divider} />
 
           <View style={styles.hostView}>
-            <Image source={{ uri: listing.host_picture_url }}
+            <Image source={{ uri: listing.host_picture_url }} style={styles.host} />
 
           </View>
         </View>
