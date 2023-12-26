@@ -32,7 +32,7 @@ const Page = () => {
           </View>
           <View style={styles.divider} />
 
-          <View style={}>
+          <View style={styles.hostView}>
 
           </View>
         </View>
