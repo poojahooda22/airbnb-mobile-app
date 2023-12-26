@@ -30,7 +30,7 @@ const Page = () => {
               {listing.review_scores_rating / 20} . {listing.number_of_reviews} reviews
             </Text>
           </View>
-          
+          <View style={styles.divider} />
         </View>
       </Animated.ScrollView>
     </View>
