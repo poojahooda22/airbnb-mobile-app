@@ -20,6 +20,7 @@ const Page = () => {
         <Animated.Image source={{ uri: listing.xl_picture_url}} style={styles.image} />
         <View >
           <Text>{listing.name}</Text>
+          <Text></Text>
         </View>
       </Animated.ScrollView>
     </View>
