@@ -24,8 +24,11 @@ const Page = () => {
           <Text style={styles.rooms}>
             {listing.guests_included} guests | {listing.bedrooms} bedrooms | {listing.beds} beds | {listing.bathrooms} bathrooms
           </Text>
-          <View>
+          <View style={{ flexDirection: 'row', gap:4 }}>
             <Ionicons name="star" size={16} />
+            <Text>
+              {listing.review_scores_rating / 20} . {listing.number_of_reviews} reviews
+            </Text>
           </View>
         </View>
       </Animated.ScrollView>
