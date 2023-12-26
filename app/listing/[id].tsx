@@ -24,6 +24,9 @@ const Page = () => {
           <Text style={styles.rooms}>
             {listing.guests_included} guests | {listing.bedrooms} bedrooms | {listing.beds} beds | {listing.bathrooms} bathrooms
           </Text>
+          <View>
+            <Ionicons name="star" size={16} />
+          </View>
         </View>
       </Animated.ScrollView>
     </View>
