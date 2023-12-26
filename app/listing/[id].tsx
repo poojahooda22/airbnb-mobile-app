@@ -21,6 +21,9 @@ const Page = () => {
         <View style={styles.infoContainer}>
           <Text style={styles.name}>{listing.name}</Text>
           <Text style={styles.location}>{listing.room_type} in {listing.smart_location}</Text>
+          <Text>
+            {listing.guests_included} guests | {listing.bedrooms} bedrooms | {listing.beds} beds | {listing.bathrooms} bathrooms
+          </Text>
         </View>
       </Animated.ScrollView>
     </View>
