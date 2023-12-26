@@ -36,7 +36,7 @@ const Page = () => {
             <Image source={{ uri: listing.host_picture_url }} style={styles.host} />
 
             <View>
-              <Text>{listing.host_name}</Text>
+              <Text style={{ fontWeight: '500', fontSize: 16}}>Hosted by {listing.host_name}</Text>
               <Text></Text>
             </View>
 
