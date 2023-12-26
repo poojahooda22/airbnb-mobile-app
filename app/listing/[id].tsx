@@ -4,7 +4,7 @@ import { useLocalSearchParams } from 'expo-router';
 import listingsData from '@/assets/data/airbnb-listings.json';
 import {Listing } from '@/interfaces/listing';
 import Animated from 'react-native-reanimated';
-
+import { Ionicons } from '@expo/vector-icons';
 
 
 const IMG_HEIGHT = 300;
