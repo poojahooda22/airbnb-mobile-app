@@ -205,6 +205,9 @@ const styles = StyleSheet.create({
     borderWidth: StyleSheet.hairlineWidth,
     borderColor: Colors.grey,
   },
+  header: {
+    
+  }
 });
 
 export default Page;
