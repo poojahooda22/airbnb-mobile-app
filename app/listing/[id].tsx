@@ -73,6 +73,12 @@ const Page = () => {
       };
     });
 
+    const headerAnimatedStyle = useAnimatedStyle(() => {
+      return {
+
+      };
+    });
+
   return (
     <View style={styles.container}>
       <Animated.ScrollView 
