@@ -75,7 +75,7 @@ const Page = () => {
 
     const headerAnimatedStyle = useAnimatedStyle(() => {
       return {
-        opacity:
+        opacity: interpolate(scrollOffset.value, [])
       };
     });
 
