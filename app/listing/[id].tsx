@@ -208,6 +208,7 @@ const styles = StyleSheet.create({
   header: {
     backgroundColor: '#fff',
     height: 100,
+    borderBottomColor: Colors.grey,
     
   }
 });
