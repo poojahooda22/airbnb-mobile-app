@@ -36,7 +36,7 @@ const Page = () => {
     useLayoutEffect(() => {
       navigation.setOptions({
         headerBackground: () => (
-          <Animated.View />
+          <Animated.View style={} />
         ),
         headerRight: () => (
           <View style={styles.bar}>
