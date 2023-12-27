@@ -206,7 +206,7 @@ const styles = StyleSheet.create({
     borderColor: Colors.grey,
   },
   header: {
-    
+    backgroundColor:
   }
 });
 
