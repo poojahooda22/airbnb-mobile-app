@@ -11,7 +11,7 @@ const Page = () => {
     <View style={styles.topView}>
       <Text  onPress={() => signOut()} style={styles.button}>Logout</Text>
         {!isSignedIn && (
-          <Link href={'/(modals)/login'} style={}>
+          <Link href={'/(modals)/login'} style={styles.button}>
             <Text>Log In</Text>
           </Link>
         )}
