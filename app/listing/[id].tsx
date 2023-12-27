@@ -207,7 +207,8 @@ const styles = StyleSheet.create({
   },
   header: {
     backgroundColor: '#fff',
-    height: 
+    height: 100,
+    
   }
 });
 
