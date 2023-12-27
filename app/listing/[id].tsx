@@ -210,8 +210,7 @@ const styles = StyleSheet.create({
     height: 100,
     borderBottomColor: Colors.grey,
     borderWidth: StyleSheet.hairlineWidth,
-    
-  }
+  },
 });
 
 export default Page;
