@@ -35,6 +35,9 @@ const Page = () => {
 
     useLayoutEffect(() => {
       navigation.setOptions({
+        headerBackground: () => (
+
+        ),
         headerRight: () => (
           <View style={styles.bar}>
             <TouchableOpacity style={styles.roundButton} onPress={shareListing}>
