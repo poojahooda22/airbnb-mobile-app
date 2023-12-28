@@ -43,7 +43,8 @@ const Page = () => {
             <TouchableOpacity style={styles.roundButton} onPress={shareListing}>
               <Ionicons 
                 name="share-outline" 
-                size={22} color={'#000'} 
+                size={22} 
+                color={'#000'} 
               />
             </TouchableOpacity>
             <TouchableOpacity style={styles.roundButton} >
