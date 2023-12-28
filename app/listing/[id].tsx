@@ -50,7 +50,8 @@ const Page = () => {
             <TouchableOpacity style={styles.roundButton} >
               <Ionicons 
                 name="heart-outline" 
-                size={22} color={'#000'} />
+                size={22} 
+                color={'#000'} />
             </TouchableOpacity>
           </View>
         ),
