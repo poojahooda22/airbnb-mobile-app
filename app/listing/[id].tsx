@@ -36,7 +36,7 @@ const Page = () => {
     useLayoutEffect(() => {
       navigation.setOptions({
         headerBackground: () => (
-          <Animated.View style={[styles.header]} />
+          <Animated.View style={[styles.header, headerAnimatedStyle]} />
         ),
         headerRight: () => (
           <View style={styles.bar}>
@@ -75,7 +75,7 @@ const Page = () => {
 
     const headerAnimatedStyle = useAnimatedStyle(() => {
       return {
-        opacity: interpolate(scrollOffset.value, [0, IMG_HEIGHT / 1.5], [0,1])
+        opacity: interpolate(scrollOffset.value, [0, IMG_HEIGHT / 2 ], [0,1]),
       };
     });
 
