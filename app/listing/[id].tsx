@@ -62,7 +62,7 @@ const Page = () => {
               name="chevron-back-outline" 
               size={24} 
               color={'#000'} 
-              />
+            />
           </TouchableOpacity>
         )
       });
