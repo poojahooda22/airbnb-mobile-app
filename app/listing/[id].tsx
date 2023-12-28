@@ -41,7 +41,8 @@ const Page = () => {
         headerRight: () => (
           <View style={styles.bar}>
             <TouchableOpacity style={styles.roundButton} onPress={shareListing}>
-              <Ionicons name="share-outline" size={22} color={'#000'} />
+              <Ionicons 
+              name="share-outline" size={22} color={'#000'} />
             </TouchableOpacity>
             <TouchableOpacity style={styles.roundButton} >
               <Ionicons name="heart-outline" size={22} color={'#000'} />
