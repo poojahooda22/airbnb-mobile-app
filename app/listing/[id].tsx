@@ -60,7 +60,8 @@ const Page = () => {
           <TouchableOpacity style={styles.roundButton} onPress={() => navigation.goBack()}>
             <Ionicons 
               name="chevron-back-outline" 
-              size={24} color={'#000'} />
+              size={24} 
+              color={'#000'} />
           </TouchableOpacity>
         )
       });
