@@ -4,7 +4,7 @@ import React from 'react'
 const ListingsMap = () => {
   return (
     <View>
-        <Text></Text>
+        <Text>Listing Map</Text>
     </View>
   )
 }
