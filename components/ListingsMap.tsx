@@ -3,7 +3,9 @@ import React from 'react'
 
 const ListingsMap = () => {
   return (
-    <View></View>
+    <View>
+        <Text></Text>
+    </View>
   )
 }
 
