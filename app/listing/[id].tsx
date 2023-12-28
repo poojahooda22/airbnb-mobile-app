@@ -61,7 +61,8 @@ const Page = () => {
             <Ionicons 
               name="chevron-back-outline" 
               size={24} 
-              color={'#000'} />
+              color={'#000'} 
+              />
           </TouchableOpacity>
         )
       });
