@@ -51,7 +51,8 @@ const Page = () => {
               <Ionicons 
                 name="heart-outline" 
                 size={22} 
-                color={'#000'} />
+                color={'#000'} 
+                />
             </TouchableOpacity>
           </View>
         ),
