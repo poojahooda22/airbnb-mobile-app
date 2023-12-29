@@ -43,7 +43,11 @@ const Page = () => {
           <Text></Text>
         </View>
       )}
-      <Button title="Log out"  onPress={() => signOut()} />
+
+      {isSignedIn && 
+        <Button title="Log out"  onPress={() => signOut()} />
+      }
+      
         {!isSignedIn && (
           <Link href={'/(modals)/login'}>
             <Text>Log In</Text>
