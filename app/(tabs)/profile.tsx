@@ -123,7 +123,12 @@ const styles = StyleSheet.create({
     borderRadius: 50,
     backgroundColor: Colors.grey,
   },
-  
+  editRow: {
+    flex: 1,
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
   
 });
 
