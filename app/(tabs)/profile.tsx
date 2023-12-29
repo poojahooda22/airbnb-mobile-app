@@ -117,6 +117,13 @@ const styles = StyleSheet.create({
     gap: 14,
     marginBottom: 24,
   },
+  avatar: {
+    width: 50,
+    height: 50,
+    borderRadius: 50,
+    backgroundColor: Colors.grey,
+  },
+  
   
 });
 
