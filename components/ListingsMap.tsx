@@ -3,7 +3,7 @@ import React from 'react'
 import MapView, { PROVIDER_GOOGLE } from 'react-native-maps';
 import { defaultStyles } from '@/constants/Styles';
 import { ListingGeo } from '@/interfaces/listingGeo';
-
+import { Marker } from 'react-native-maps';
 
 
 interface Props {
