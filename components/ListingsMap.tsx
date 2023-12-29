@@ -2,6 +2,7 @@ import { View, Text, StyleSheet } from 'react-native'
 import React from 'react'
 import MapView, { PROVIDER_GOOGLE } from 'react-native-maps';
 import { defaultStyles } from '@/constants/Styles';
+import { ListingGeo } from '@/interfaces/listingGeo';
 
 
 interface Props {
@@ -25,7 +26,13 @@ const ListingsMap = ({listings}: Props) => {
           showsMyLocationButton
           initialRegion={INITIAL_REGION} 
         >
-          
+          {listings.features.map((item: ListingGeo) => (
+            <Marker coordinate={{
+              latitude: item.properties.latitude,
+              longitude: item.properties.longitude,
+            }}
+            />
+          ))}
         </MapView>
     </View>
   );
