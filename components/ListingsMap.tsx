@@ -1,9 +1,9 @@
 import { View, Text, StyleSheet } from 'react-native'
-import React from 'react'
-import MapView, { PROVIDER_GOOGLE } from 'react-native-maps';
+import React , {memo} from 'react'
+import  { PROVIDER_GOOGLE, Marker  } from 'react-native-maps';
 import { defaultStyles } from '@/constants/Styles';
 import { ListingGeo } from '@/interfaces/listingGeo';
-import { Marker } from 'react-native-maps';
+import MapView from "react-native-map-clustering";
 import { useRouter } from 'expo-router';
 
 
@@ -19,20 +19,49 @@ const INITIAL_REGION = {
   longitudeDelta: 9,
 }
 
-const ListingsMap = ({listings}: Props) => {
+const ListingsMap = memo(({listings}: Props) => {
   const router = useRouter();
   const onMarkerSelected = (item: ListingGeo) => {
     router.push(`/listing/${item.properties.id}`);
   };
 
+  const renderCluster = (cluster: any) => {
+    const { id, geometry, onPress, properties } = cluster;
+    const points = properties.point_count;
+
+    return (
+      <Marker
+        key={`cluster-${id}`}
+        onPress={onPress}
+        coordinate={{
+          longitude: geometry.coordinates[0],
+          latitude: geometry.coordinates[1],
+        }}
+      >
+        <View style={styles.marker}>
+          <Text style={{
+            color: '#000',
+            textAlign: 'center',
+            fontFamily: 'mon-sb'
+          }}>{points}</Text>
+        </View>
+      </Marker>
+    )
+  }
+
   return (
     <View style={styles.container}>
         <MapView 
-          style={styles.map } 
+          animationEnabled={false}
+          style={StyleSheet.absoluteFill} 
           provider={PROVIDER_GOOGLE} 
           showsUserLocation 
           showsMyLocationButton
           initialRegion={INITIAL_REGION} 
+          clusterColor='#fff'
+          clusterTextColor="#000"
+          clusterFontFamily='mon-sb'
+          renderCluster={renderCluster}
         >
           {listings.features.map((item: ListingGeo) => (
             <Marker 
@@ -43,15 +72,15 @@ const ListingsMap = ({listings}: Props) => {
                 longitude: +item.properties.longitude,
               }}
             >
-              <View>
-                <Text>$ {}</Text>
+              <View style={styles.marker}>
+                <Text style={styles.markerText}>$ {item.properties.price}</Text>
               </View>
             </Marker>
           ))}
         </MapView>
     </View>
   );
-};
+});
 
 const styles = StyleSheet.create({
   container:{
