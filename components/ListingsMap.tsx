@@ -22,7 +22,8 @@ const ListingsMap = ({listings}: Props) => {
           style={styles.map } 
           provider={PROVIDER_GOOGLE} 
           showsUserLocation 
-          showsMyLocationButton />
+          showsMyLocationButton 
+        />
     </View>
   );
 };
