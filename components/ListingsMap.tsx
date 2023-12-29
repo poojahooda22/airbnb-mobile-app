@@ -42,7 +42,8 @@ const ListingsMap = ({listings}: Props) => {
                 latitude: +item.properties.latitude,
                 longitude: +item.properties.longitude,
               }}
-            />
+            >
+              </Marker>
           ))}
         </MapView>
     </View>
