@@ -61,6 +61,9 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
     borderRadius: 12,
     padding: 6,
+    elevation: 5,
+    shadowColor: '#000',
+    shadowOpacity: 0.1,
     
   },
   markerText: {},
