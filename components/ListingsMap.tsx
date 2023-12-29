@@ -6,6 +6,7 @@ import { ListingGeo } from '@/interfaces/listingGeo';
 import { Marker } from 'react-native-maps';
 
 
+
 interface Props {
     listings: any;
 }
@@ -30,8 +31,8 @@ const ListingsMap = ({listings}: Props) => {
           {listings.features.map((item: ListingGeo) => (
             <Marker 
               coordinate={{
-                latitude: item.properties.latitude,
-                longitude: item.properties.longitude,
+                latitude: +item.properties.latitude,
+                longitude: +item.properties.longitude,
               }}
             />
           ))}
