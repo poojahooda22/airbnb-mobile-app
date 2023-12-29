@@ -44,7 +44,7 @@ const ListingsMap = ({listings}: Props) => {
               }}
             >
               <View>
-                
+                <Text>$ {}</Text>
               </View>
             </Marker>
           ))}
