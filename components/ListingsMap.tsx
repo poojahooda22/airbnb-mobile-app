@@ -65,7 +65,10 @@ const styles = StyleSheet.create({
     shadowColor: '#000',
     shadowOpacity: 0.1,
     shadowRadius: 6,
-    
+    shadowOffset: {
+      width: 1,
+      height: 10,
+    },
   },
   markerText: {},
 });
