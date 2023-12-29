@@ -27,6 +27,7 @@ const Layout = () => {
             name="wishlists"
             options={{
                 tabBarLabel: 'Wishlists',
+                headerShown: false,
                 tabBarIcon: ({color, size}) => <Ionicons name="heart-outline" color={color} size={size}/>
             }}
         />
@@ -34,6 +35,7 @@ const Layout = () => {
             name="trips"
             options={{
                 tabBarLabel: 'Trips',
+                headerShown: false,
                 tabBarIcon: ({color, size}) => <FontAwesome5 name="airbnb" color={color} size={size}/>
             }}
         />
@@ -41,6 +43,7 @@ const Layout = () => {
             name="inbox"
             options={{
                 tabBarLabel: 'Inbox',
+                headerShown: false,
                 tabBarIcon: ({color, size}) => <MaterialCommunityIcons name="message-outline" color={color} size={size}/>
             }}
         />
@@ -48,6 +51,7 @@ const Layout = () => {
             name="profile"
             options={{
                 tabBarLabel: 'Profile',
+                headerShown: false,
                 tabBarIcon: ({color, size}) => <Ionicons name="person-circle" color={color} size={size}/>
             }}
         />
