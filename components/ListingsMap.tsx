@@ -5,6 +5,7 @@ import { defaultStyles } from '@/constants/Styles';
 import { ListingGeo } from '@/interfaces/listingGeo';
 
 
+
 interface Props {
     listings: any;
 }
@@ -27,10 +28,11 @@ const ListingsMap = ({listings}: Props) => {
           initialRegion={INITIAL_REGION} 
         >
           {listings.features.map((item: ListingGeo) => (
-            <Marker coordinate={{
-              latitude: item.properties.latitude,
-              longitude: item.properties.longitude,
-            }}
+            <Marker 
+              coordinate={{
+                latitude: item.properties.latitude,
+                longitude: item.properties.longitude,
+              }}
             />
           ))}
         </MapView>
