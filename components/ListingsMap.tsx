@@ -30,6 +30,7 @@ const ListingsMap = ({listings}: Props) => {
         >
           {listings.features.map((item: ListingGeo) => (
             <Marker 
+              key={item.properties.id}
               coordinate={{
                 latitude: +item.properties.latitude,
                 longitude: +item.properties.longitude,
