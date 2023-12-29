@@ -4,6 +4,7 @@ import MapView, { PROVIDER_GOOGLE } from 'react-native-maps';
 import { defaultStyles } from '@/constants/Styles';
 import { ListingGeo } from '@/interfaces/listingGeo';
 import { Marker } from 'react-native-maps';
+import { useRouter } from 'expo-router';
 
 
 
@@ -19,6 +20,7 @@ const INITIAL_REGION = {
 }
 
 const ListingsMap = ({listings}: Props) => {
+  const router = useRouter();
   const onMarkerSelected = (event: ListingGeo) => {
     console.log(event)
   };
