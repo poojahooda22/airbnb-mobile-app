@@ -1,10 +1,11 @@
-import { View, Text, Button, StyleSheet, SafeAreaView } from 'react-native'
+import { View, Text, Button, StyleSheet, SafeAreaView, TouchableOpacity, Image } from 'react-native'
 import React,{ useEffect, useState } from 'react';
 import { useAuth, useUser } from '@clerk/clerk-expo';
 import {Link} from 'expo-router';
 import { defaultStyles } from '@/constants/Styles';
 import Colors from '@/constants/Colors';
 import { Ionicons } from '@expo/vector-icons';
+
 
 const Page = () => {
   const { signOut, isSignedIn } = useAuth();
@@ -27,7 +28,7 @@ const Page = () => {
 
   }
 
-  const onCptureImage = async () => {
+  const onCaptureImage = async () => {
 
   }
 
@@ -40,12 +41,24 @@ const Page = () => {
 
       {user && (
         <View style={styles.card}> 
-          <Text></Text>
+          <TouchableOpacity onPress={onCaptureImage}>
+            <Image source={{ uri: user?.imageUrl }} style={styles.avatar} />
+          </TouchableOpacity>
+          <View style={{ flexDirection: 'row', gap: 6 }}>
+            {edit ? (
+              <Text>EDIT</Text>
+            ) : (
+              <View style={styles.editRow}>
+                <Text style={{ fontFamily: 'mon-b', fontSize: 18 }}>{firstName} {lastName}</Text>
+              </View>
+            )}
+
+          </View>
         </View>
       )}
 
       {isSignedIn && 
-        <Button title="Log out"  onPress={() => signOut()} />
+        <Button title="Log out"  onPress={() => signOut()} color={Colors.dark} />
       }
       
         {!isSignedIn && (
@@ -104,6 +117,7 @@ const styles = StyleSheet.create({
     gap: 14,
     marginBottom: 24,
   },
+  
 });
 
 export default Page;
