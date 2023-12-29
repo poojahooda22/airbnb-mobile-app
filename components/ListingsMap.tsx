@@ -21,8 +21,8 @@ const INITIAL_REGION = {
 
 const ListingsMap = ({listings}: Props) => {
   const router = useRouter();
-  const onMarkerSelected = (event: ListingGeo) => {
-    
+  const onMarkerSelected = (item: ListingGeo) => {
+    router.push(`/listing/${item.properties.id}`);
   };
 
   return (
