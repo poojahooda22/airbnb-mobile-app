@@ -24,7 +24,9 @@ const ListingsMap = ({listings}: Props) => {
           showsUserLocation 
           showsMyLocationButton
           initialRegion={INITIAL_REGION} 
-        />
+        >
+          
+        </MapView>
     </View>
   );
 };
