@@ -22,7 +22,7 @@ const ListingsMap = ({listings}: Props) => {
   const onMarkerSelected = (event: ListingGeo) => {
     console.log(event)
   };
-  
+
   return (
     <View style={styles.container}>
         <MapView 
@@ -35,6 +35,7 @@ const ListingsMap = ({listings}: Props) => {
           {listings.features.map((item: ListingGeo) => (
             <Marker 
               key={item.properties.id}
+              onPress={() => onMarkerSelected(item)}
               coordinate={{
                 latitude: +item.properties.latitude,
                 longitude: +item.properties.longitude,
