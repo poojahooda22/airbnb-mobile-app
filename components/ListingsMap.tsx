@@ -19,6 +19,10 @@ const INITIAL_REGION = {
 }
 
 const ListingsMap = ({listings}: Props) => {
+  const onMarkerSelected = (event: ListingGeo) => {
+    console.log(event)
+  };
+  
   return (
     <View style={styles.container}>
         <MapView 
