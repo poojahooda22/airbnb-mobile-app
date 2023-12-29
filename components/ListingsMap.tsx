@@ -64,6 +64,7 @@ const styles = StyleSheet.create({
     elevation: 5,
     shadowColor: '#000',
     shadowOpacity: 0.1,
+    shadowRadius: 6,
     
   },
   markerText: {},
