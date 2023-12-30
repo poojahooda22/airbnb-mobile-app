@@ -57,6 +57,7 @@ const Page = () => {
                 </TouchableOpacity>
               </View>
             )}
+            <Text>{email}</Text>
 
           </View>
         </View>
