@@ -58,7 +58,7 @@ const Page = () => {
               </View>
             )}
             <Text>{email}</Text>
-            <Text></Text>
+            <Text>Sice {user?.createdAt}</Text>
 
           </View>
         </View>
