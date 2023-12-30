@@ -58,6 +58,7 @@ const Page = () => {
               </View>
             )}
             <Text>{email}</Text>
+            <Text></Text>
 
           </View>
         </View>
