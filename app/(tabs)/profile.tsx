@@ -46,7 +46,9 @@ const Page = () => {
           </TouchableOpacity>
           <View style={{ flexDirection: 'row', gap: 6 }}>
             {edit ? (
-              
+              <TouchableOpacity>
+                <Ionicons name="checkmark-outline" size={24} color={Colors.dark}  />
+              </TouchableOpacity>
             ) : (
               <View style={styles.editRow}>
                 <Text style={{ fontFamily: 'mon-b', fontSize: 18 }}>{firstName} {lastName}</Text>
