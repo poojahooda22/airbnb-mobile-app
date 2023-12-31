@@ -1,4 +1,4 @@
-import { View, Text, Button, StyleSheet, SafeAreaView, TouchableOpacity, Image } from 'react-native'
+import { View, Text, Button, StyleSheet, SafeAreaView, TouchableOpacity, Image, TextInput } from 'react-native'
 import React,{ useEffect, useState } from 'react';
 import { useAuth, useUser } from '@clerk/clerk-expo';
 import {Link} from 'expo-router';
@@ -25,7 +25,7 @@ const Page = () => {
   }, [user]);
 
   const onSaveUser = async () => {
-
+    setEdit(false);
   }
 
   const onCaptureImage = async () => {
@@ -46,9 +46,23 @@ const Page = () => {
           </TouchableOpacity>
           <View style={{ flexDirection: 'row', gap: 6 }}>
             {edit ? (
-              <TouchableOpacity onPress={onSaveUser}>
-                <Ionicons name="checkmark-outline" size={24} color={Colors.dark}  />
-              </TouchableOpacity>
+              <View style={styles.editRow}>
+                <TextInput 
+                  placeholder="First name"
+                  value={firstName || ''}
+                  onChangeText={setFirstName}
+                  style={[defaultStyles.inputField, { width: 100}]}
+                />
+                <TextInput 
+                  placeholder="Last name"
+                  value={lastName || ''}
+                  onChangeText={setLastName}
+                  style={[defaultStyles.inputField, { width: 100}]}
+                />
+                <TouchableOpacity onPress={onSaveUser}>
+                  <Ionicons name="checkmark-outline" size={24} color={Colors.dark}  />
+                </TouchableOpacity>
+              </View>
             ) : (
               <View style={styles.editRow}>
                 <Text style={{ fontFamily: 'mon-b', fontSize: 24 }}>{firstName} {lastName}</Text>
@@ -59,12 +73,12 @@ const Page = () => {
             )}
           </View>
           <Text>{email}</Text>
-            <Text>Since {user?.createdAt?.toLocaleDateString()}</Text>
+          <Text>Since {user?.createdAt?.toLocaleDateString()}</Text>
         </View>
       )}
 
       {isSignedIn && 
-        <Button title="Log out"  onPress={() => signOut()} color={Colors.dark} />
+        <Button title="Log out"  onPress={() => signOut()} color={Colors.dark}/>
       }
       
         {!isSignedIn && (
@@ -130,10 +144,12 @@ const styles = StyleSheet.create({
     backgroundColor: Colors.grey,
   },
   editRow: {
+    height: 50,
     flex: 1,
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'center',
+    gap: 8
   },
   
 });
