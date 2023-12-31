@@ -116,7 +116,7 @@ const styles = StyleSheet.create({
   },
   btn2: {
     height: 50,
-    
+    width: 119,
   },
   // topView: {
   //   flexDirection: 'row',
