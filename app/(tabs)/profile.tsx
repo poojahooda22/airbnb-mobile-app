@@ -90,7 +90,7 @@ const Page = () => {
       )}
 
       {isSignedIn && 
-        <Button title="Log out"  onPress={() => signOut()} color={Colors.dark}/>
+        <Text  onPress={() => signOut()}></Text>
       }
       
         {!isSignedIn && (
