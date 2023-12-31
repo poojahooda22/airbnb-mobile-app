@@ -119,6 +119,7 @@ const styles = StyleSheet.create({
     width: 119,
     borderRadius: 8,
     alignItems: 'center',
+    textAlign: 'center',
   },
   // topView: {
   //   flexDirection: 'row',
