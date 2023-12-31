@@ -26,6 +26,8 @@ const Page = () => {
 
   const onSaveUser = async () => {
     try {
+      if(!firstName || !lastName) return;
+
       
     }
     setEdit(false);
