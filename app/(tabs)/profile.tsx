@@ -104,7 +104,7 @@ const Page = () => {
 
 const styles = StyleSheet.create({
   button: {
-    backgroundColor: Colors.primary,
+    backgroundColor: Colors.dark,
     height: 50,
     width: 119,
     borderRadius: 8,
@@ -115,6 +115,7 @@ const styles = StyleSheet.create({
     fontSize: 16,
   },
   btn2: {
+    backgroundColor: Colors.dark,
     height: 50,
     width: 119,
     borderRadius: 8,
