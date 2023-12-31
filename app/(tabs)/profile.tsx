@@ -120,6 +120,7 @@ const styles = StyleSheet.create({
     borderRadius: 8,
     alignItems: 'center',
     textAlign: 'center',
+    padding: 12,
   },
   // topView: {
   //   flexDirection: 'row',
