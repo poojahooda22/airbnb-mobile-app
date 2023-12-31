@@ -29,7 +29,8 @@ const Page = () => {
       if(!firstName || !lastName) return;
 
       await user?.update({
-      
+        firstName,
+        lastName,
       });
     } 
     }
