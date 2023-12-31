@@ -90,7 +90,7 @@ const Page = () => {
       )}
 
       {isSignedIn && 
-        <Text  onPress={() => signOut()}></Text>
+        <Text  onPress={() => signOut()} >Log out</Text>
       }
       
         {!isSignedIn && (
@@ -103,18 +103,18 @@ const Page = () => {
 };
 
 const styles = StyleSheet.create({
-  // button: {
-  //   backgroundColor: Colors.primary,
-  //   height: 50,
-  //   width: 119,
-  //   borderRadius: 8,
-  //   justifyContent: 'center',
-  //   alignItems: 'center',
-  //   textAlign: 'center',
-  //   padding: 12,
-  //   color: '#fff',
-  //   fontSize: 16,
-  // },
+  button: {
+    backgroundColor: Colors.primary,
+    height: 50,
+    width: 119,
+    borderRadius: 8,
+    justifyContent: 'center',
+    alignItems: 'center',
+    textAlign: 'center',
+    padding: 12,
+    color: '#fff',
+    fontSize: 16,
+  },
   // topView: {
   //   flexDirection: 'row',
   //   justifyContent: 'space-between',
