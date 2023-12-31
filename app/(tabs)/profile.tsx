@@ -117,6 +117,7 @@ const styles = StyleSheet.create({
   btn2: {
     height: 50,
     width: 119,
+    borderRadius: 8,
   },
   // topView: {
   //   flexDirection: 'row',
