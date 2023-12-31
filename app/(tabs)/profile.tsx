@@ -90,7 +90,7 @@ const Page = () => {
       )}
 
       {isSignedIn && 
-        <Text  onPress={() => signOut()} >Log out</Text>
+        <Text  onPress={() => signOut()} style={styles.button}>Log out</Text>
       }
       
         {!isSignedIn && (
@@ -108,7 +108,6 @@ const styles = StyleSheet.create({
     height: 50,
     width: 119,
     borderRadius: 8,
-    justifyContent: 'center',
     alignItems: 'center',
     textAlign: 'center',
     padding: 12,
