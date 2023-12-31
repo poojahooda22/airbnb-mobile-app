@@ -122,6 +122,7 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     padding: 12,
     color: '#fff',
+    fontSize: 16,
   },
   // topView: {
   //   flexDirection: 'row',
