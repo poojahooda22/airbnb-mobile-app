@@ -28,7 +28,10 @@ const Page = () => {
     try {
       if(!firstName || !lastName) return;
 
+      await user?.update({
       
+      });
+    } 
     }
     setEdit(false);
   }
