@@ -34,6 +34,8 @@ const Page = () => {
       });
     } catch(error) {
       console.error(error);
+    } finally {
+      setEdit(false);
     }
   }
 
