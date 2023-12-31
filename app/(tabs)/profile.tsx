@@ -35,7 +35,6 @@ const Page = () => {
     } catch(error) {
       console.error(error);
     }
-    setEdit(false);
   }
 
   const onCaptureImage = async () => {
