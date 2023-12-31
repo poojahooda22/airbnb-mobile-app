@@ -115,7 +115,7 @@ const styles = StyleSheet.create({
     fontSize: 16,
   },
   btn2: {
-    backgroundColor: Colors.dark,
+    backgroundColor: Colors.primary,
     height: 50,
     width: 119,
     borderRadius: 8,
