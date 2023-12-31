@@ -33,7 +33,7 @@ const Page = () => {
         lastName,
       });
     } catch(error) {
-      
+      console.error(error);
     }
     setEdit(false);
   }
