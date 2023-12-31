@@ -5,6 +5,7 @@ import {Link} from 'expo-router';
 import { defaultStyles } from '@/constants/Styles';
 import Colors from '@/constants/Colors';
 import { Ionicons } from '@expo/vector-icons';
+import * as ImagePicker from 'expo-image-picker';
 
 
 const Page = () => {
