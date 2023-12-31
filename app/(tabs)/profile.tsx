@@ -95,7 +95,7 @@ const Page = () => {
       
         {!isSignedIn && (
           <Link href={'/(modals)/login'}>
-            <Text>Log In</Text>
+            <Text style={styles.btn2}>Log In</Text>
           </Link>
         )}
     </SafeAreaView>
@@ -113,6 +113,9 @@ const styles = StyleSheet.create({
     padding: 12,
     color: '#fff',
     fontSize: 16,
+  },
+  btn2: {
+
   },
   // topView: {
   //   flexDirection: 'row',
