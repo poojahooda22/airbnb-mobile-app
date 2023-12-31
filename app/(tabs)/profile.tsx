@@ -32,7 +32,8 @@ const Page = () => {
         firstName,
         lastName,
       });
-    } 
+    } catch(error) {
+      
     }
     setEdit(false);
   }
