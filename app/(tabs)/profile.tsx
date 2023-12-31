@@ -104,6 +104,8 @@ const Page = () => {
 
 const styles = StyleSheet.create({
   button: {
+    marginLeft: 30,
+    marginTop: 30,
     backgroundColor: Colors.dark,
     height: 50,
     width: 119,
