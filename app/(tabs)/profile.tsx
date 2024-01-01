@@ -107,7 +107,7 @@ const Page = () => {
         </View>
 
         <View>
-          
+          <Text>Settings</Text>
         </View>
       
     </SafeAreaView>
