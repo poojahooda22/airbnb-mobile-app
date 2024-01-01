@@ -110,7 +110,7 @@ const Page = () => {
           style={{marginLeft: 30, marginTop: 30}}
         >
           <Text 
-          style={{fontFamily: 'mon-sb', fontSize: 18, marginBottom: 30}}>Settings</Text>
+            style={{fontFamily: 'mon-sb', fontSize: 18, marginBottom: 30}}>Settings</Text>
           <View style={{flexDirection: 'row', justifyContent: 'space-between'}}>
               <Ionicons name="person-circle" size={24} style={defaultStyles.btnIcon}/>
               <Text>Personal information</Text>
