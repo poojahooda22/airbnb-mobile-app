@@ -105,6 +105,10 @@ const Page = () => {
             </Link>
           )}
         </View>
+
+        <View>
+          
+        </View>
       
     </SafeAreaView>
   )
