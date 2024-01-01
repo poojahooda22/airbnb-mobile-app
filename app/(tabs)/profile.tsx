@@ -41,7 +41,12 @@ const Page = () => {
   }
 
   const onCaptureImage = async () => {
-
+    const result = await ImagePicker.launchImageLibraryAsync({
+      mediaTypes: ImagePicker.MediaTypeOptions.Images,
+      allowsEditing: true,
+      quality: 0.75,
+      base64: true
+    })
   }
 
   return (
@@ -89,15 +94,18 @@ const Page = () => {
         </View>
       )}
 
-      {isSignedIn && 
-        <Text  onPress={() => signOut()} style={styles.button}>Log out</Text>
-      }
+        <View style={{flexDirection: 'column', gap: 8, alignItems: 'center' }}>
+          {isSignedIn && 
+          <Text  onPress={() => signOut()} style={styles.button}>Log out</Text>
+          }
+        
+          {!isSignedIn && (
+            <Link href={'/(modals)/login'}>
+              <Text style={styles.button1}>Log In</Text>
+            </Link>
+          )}
+        </View>
       
-        {!isSignedIn && (
-          <Link href={'/(modals)/login'}>
-            <Text style={styles.btn2}>Log In</Text>
-          </Link>
-        )}
     </SafeAreaView>
   )
 };
@@ -116,7 +124,7 @@ const styles = StyleSheet.create({
     color: '#fff',
     fontSize: 16,
   },
-  btn2: {
+  button1: {
     backgroundColor: Colors.primary,
     height: 50,
     width: 119,
