@@ -116,7 +116,7 @@ const Page = () => {
           </Text>
           <View 
             style={{flexDirection: 'row', justifyContent: 'space-between'}}
-            >
+          >
               <Ionicons name="person-circle" size={24} style={defaultStyles.btnIcon}/>
               <Text>Personal information</Text>
               <Ionicons name="chevron-forward-outline" size={24} style={defaultStyles.btnIcon}/>
