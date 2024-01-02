@@ -73,7 +73,8 @@ const Page = () => {
           >
             <Image 
               source={{ uri: user?.imageUrl }} 
-              style={styles.avatar} />
+              style={styles.avatar} 
+              />
           </TouchableOpacity>
           <View style={{ flexDirection: 'row', gap: 6 }}>
             {edit ? (
