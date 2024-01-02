@@ -66,7 +66,8 @@ const Page = () => {
 
       {user && (
         <View 
-          style={styles.card}> 
+          style={styles.card}
+        > 
           <TouchableOpacity onPress={onCaptureImage}>
             <Image source={{ uri: user?.imageUrl }} style={styles.avatar} />
           </TouchableOpacity>
