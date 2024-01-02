@@ -58,7 +58,7 @@ const Page = () => {
       >
         <Text 
           style={styles.header}
-          >
+        >
             Profile</Text>
         <Ionicons name="notifications-outline" size={24} />
       </View>
