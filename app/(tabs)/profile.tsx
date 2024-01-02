@@ -55,7 +55,7 @@ const Page = () => {
     >
       <View 
         style={styles.headerContainer}
-        >
+      >
         <Text style={styles.header}>Profile</Text>
         <Ionicons name="notifications-outline" size={24} />
       </View>
