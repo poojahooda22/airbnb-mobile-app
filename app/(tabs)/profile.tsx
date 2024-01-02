@@ -101,7 +101,8 @@ const Page = () => {
         
           {!isSignedIn && (
             <Link href={'/(modals)/login'}>
-              <Text style={styles.button1}>Log In</Text>
+              <Text 
+              style={styles.button1}>Log In</Text>
             </Link>
           )}
         </View>
