@@ -50,7 +50,8 @@ const Page = () => {
   }
 
   return (
-    <SafeAreaView style={{ marginTop: 30}}>
+    <SafeAreaView 
+    style={{ marginTop: 30}}>
       <View style={styles.headerContainer}>
         <Text style={styles.header}>Profile</Text>
         <Ionicons name="notifications-outline" size={24} />
