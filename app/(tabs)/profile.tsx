@@ -71,7 +71,8 @@ const Page = () => {
           <TouchableOpacity 
             onPress={onCaptureImage}
           >
-            <Image source={{ uri: user?.imageUrl }} style={styles.avatar} />
+            <Image 
+            source={{ uri: user?.imageUrl }} style={styles.avatar} />
           </TouchableOpacity>
           <View style={{ flexDirection: 'row', gap: 6 }}>
             {edit ? (
