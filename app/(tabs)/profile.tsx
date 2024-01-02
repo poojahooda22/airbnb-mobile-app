@@ -77,7 +77,7 @@ const Page = () => {
             />
           </TouchableOpacity>
           <View 
-          style={{ flexDirection: 'row', gap: 6 }}>
+            style={{ flexDirection: 'row', gap: 6 }}>
             {edit ? (
               <View style={styles.editRow}>
                 <TextInput 
