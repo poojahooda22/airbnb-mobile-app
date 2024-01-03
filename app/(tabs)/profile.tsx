@@ -111,7 +111,7 @@ const Page = () => {
                   {firstName} {lastName}
                 </Text>
                 <TouchableOpacity 
-                onPress={() => setEdit(true)}>
+                  onPress={() => setEdit(true)}>
                   <Ionicons name="create-outline" size={24} color={Colors.dark} />
                 </TouchableOpacity>
               </View>
