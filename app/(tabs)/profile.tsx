@@ -122,7 +122,8 @@ const Page = () => {
               </View>
             )}
           </View>
-          <Text>{email}</Text>
+          <Text>
+            {email}</Text>
           <Text>Since {user?.createdAt?.toLocaleDateString()}</Text>
         </View>
       )}
