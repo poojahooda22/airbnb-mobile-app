@@ -108,7 +108,8 @@ const Page = () => {
                 <Text 
                   style={{ fontFamily: 'mon-b', fontSize: 24 }}
                 >
-                  {firstName} {lastName}</Text>
+                  {firstName} {lastName}
+                  </Text>
                 <TouchableOpacity onPress={() => setEdit(true)}>
                   <Ionicons name="create-outline" size={24} color={Colors.dark} />
                 </TouchableOpacity>
