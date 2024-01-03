@@ -103,7 +103,8 @@ const Page = () => {
               </View>
             ) : (
               <View 
-                style={styles.editRow}>
+                style={styles.editRow}
+              >
                 <Text 
                 style={{ fontFamily: 'mon-b', fontSize: 24 }}>{firstName} {lastName}</Text>
                 <TouchableOpacity onPress={() => setEdit(true)}>
