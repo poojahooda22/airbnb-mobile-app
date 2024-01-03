@@ -116,7 +116,8 @@ const Page = () => {
                   <Ionicons 
                     name="create-outline" 
                     size={24} 
-                    color={Colors.dark} />
+                    color={Colors.dark} 
+                    />
                 </TouchableOpacity>
               </View>
             )}
