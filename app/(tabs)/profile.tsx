@@ -80,7 +80,8 @@ const Page = () => {
             style={{ flexDirection: 'row', gap: 6 }}
           >
             {edit ? (
-              <View style={styles.editRow}>
+              <View 
+              style={styles.editRow}>
                 <TextInput 
                   placeholder="First name"
                   value={firstName || ''}
