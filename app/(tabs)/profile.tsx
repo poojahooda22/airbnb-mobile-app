@@ -95,7 +95,8 @@ const Page = () => {
                   onChangeText={setLastName}
                   style={[defaultStyles.inputField, { width: 100}]}
                 />
-                <TouchableOpacity onPress={onSaveUser}>
+                <TouchableOpacity 
+                onPress={onSaveUser}>
                   <Ionicons name="checkmark-outline" size={24} color={Colors.dark}  />
                 </TouchableOpacity>
               </View>
