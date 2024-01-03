@@ -81,7 +81,7 @@ const Page = () => {
           >
             {edit ? (
               <View 
-              style={styles.editRow}>
+                style={styles.editRow}>
                 <TextInput 
                   placeholder="First name"
                   value={firstName || ''}
