@@ -117,7 +117,7 @@ const Page = () => {
                     name="create-outline" 
                     size={24} 
                     color={Colors.dark} 
-                    />
+                  />
                 </TouchableOpacity>
               </View>
             )}
