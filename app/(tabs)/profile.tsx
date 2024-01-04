@@ -142,22 +142,71 @@ const Page = () => {
         </View>
 
         <View 
-          style={{marginLeft: 30, marginTop: 30}}
+          style={{margin: 16, marginTop: 30}}
         >
           <Text 
             style={{fontFamily: 'mon-sb', fontSize: 18, marginBottom: 30}}
           >
             Settings
           </Text>
-          <View 
-            style={{flexDirection: 'row', justifyContent: 'space-between'}}
-          >
-            <Ionicons name="person-circle" size={24} style={defaultStyles.btnIcon}/>
-            <Text>
-              Personal information
-            </Text>
-            <Ionicons name="chevron-forward-outline" size={24} style={defaultStyles.btnIcon}/>
-          </View>
+          
+          <TouchableOpacity>
+              <View 
+                style={{ flexDirection: 'row', alignItems: 'center', gap: 8, marginBottom: 16}}
+              >
+                <Ionicons name="person-outline" size={20} color={Colors.dark} />
+                <Text style={{ fontFamily: 'mon', fontSize: 14}}>Personal Information</Text>
+              </View>
+              {/* <Ionicons name="chevron-forward-outline" size={24} style={defaultStyles.btnIcon}/> */}
+          </TouchableOpacity>
+          <View
+            style={{
+              flex: 1,
+              borderBottomColor: '#000',
+              borderBottomWidth: StyleSheet.hairlineWidth,
+            }}
+          />
+          <TouchableOpacity>
+              <View 
+                style={{ flexDirection: 'row', alignItems: 'center', gap: 8, marginBottom: 16, marginTop: 16}}
+              >
+                <Ionicons name="shield-checkmark-outline" size={20} color={Colors.dark} />
+                <Text style={{ fontFamily: 'mon', fontSize: 14}}>Login Security</Text>
+              </View>
+              {/* <Ionicons name="chevron-forward-outline" size={24} style={defaultStyles.btnIcon}/> */}
+          </TouchableOpacity>
+          <View
+            style={{
+              flex: 1,
+              borderBottomColor: '#000',
+              borderBottomWidth: StyleSheet.hairlineWidth,
+            }}
+          />
+          <TouchableOpacity>
+            <View 
+                style={{ 
+                    flexDirection: 'row', 
+                    alignItems: 'center', 
+                    justifyContent: 'flex-start', // This aligns children at both ends
+                    marginBottom: 16, 
+                    marginTop: 16
+                }}
+            >
+            
+              <View style={{ flexDirection: 'row', alignItems: 'center', gap: 8 }}>
+                  <Ionicons name="cash-outline" size={20} color={Colors.dark} />
+                  <Text style={{ fontFamily: 'mon', fontSize: 14}}>Payments and payouts</Text>
+              </View>
+                
+            </View>
+          </TouchableOpacity>
+          <View
+            style={{
+              flex: 1,
+              borderBottomColor: '#000',
+              borderBottomWidth: StyleSheet.hairlineWidth,
+            }}
+          />
         </View>
       
     </SafeAreaView>
