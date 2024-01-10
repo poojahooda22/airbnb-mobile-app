@@ -1,9 +1,2 @@
 Let's summarize my Airbnb Clone mobile app, . Authorization is handled with the help of Clerk. On the explore page, different categories are implemented using the Map and Set, with the active category set by the useState hook. Additionally, the app features a listing of hotels with details, with the data imported from a website named "public.opendatasoft." An extra task in TypeScript is to initialize the interfaces of the data, such as id=string, name=string, etc. Comparing to the real Airbnb app, there's a FAB for the map. For this, we need to wrap the listings in a bottom sheet, and on clicking the map icon, the map page is shown with the listing at the bottom of the page in the bottom sheet, which becomes visible upon scrolling up. For the map, 'react-native-maps' is used, and for the bottom sheet, 'gorhom/bottom-sheet'. For icons, 'expo/vector-icons' is employed. I also did some extra work to practice more on the HTML and CSS side in React Native, so I implemented the three tabs, 'wishlist, trips, and inbox', by myself. Lastly, on the profile page, a user can view and change his profile details.![Screenshot 2024-01-10 
 
-![login](https://github.com/poojahooda22/airbnb-mobile-app/assets/91055527/973f9ab0-51d4-4508-b529-66a85d232ae2)
-![homepage](https://github.com/poojahooda22/airbnb-mobile-app/assets/91055527/051c751b-1a78-4824-b46c-c92d4f217c34)
-![hotel-listings](https://github.com/poojahooda22/airbnb-mobile-app/assets/91055527/5e8d1fac-2c96-431a-b2ac-565e6f24ad5b)
-![map](https://github.com/poojahooda22/airbnb-mobile-app/assets/91055527/d160ec7b-35c6-499b-a8ae-e353a3669a17)
-![trips](https://github.com/poojahooda22/airbnb-mobile-app/assets/91055527/663b6655-7ce2-41da-9f53-18079d76bd01)
-![profilepage](https://github.com/poojahooda22/airbnb-mobile-app/assets/91055527/1a6f430e-2c07-467f-8967-ab773cb8e142)
-
